@@ -9,6 +9,6 @@ endmodule
 
 /*
 // Gate level simulation
-xor(sum, a,b);
-and(carry, a,b);
+xor XOR1(sum, a,b);
+and AND1(carry, a,b);
 */
