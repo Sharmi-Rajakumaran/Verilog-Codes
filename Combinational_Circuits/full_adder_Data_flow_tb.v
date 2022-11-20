@@ -13,7 +13,29 @@ module full_adder_Data_flow_tb();
          begin
            {i_a_tb, i_b_tb, i_c_tb} = i;
            #20;
-         end
+  /*
+  
+  a = 1'b0;
+  b = 1'b0;
+  c = 1'b0;
+  #10;
+  
+  a = 1'b1;
+  b = 1'b0;
+  c = 1'b0;
+  #10;
+  
+  a = 1'b1;
+  b = 1'b0;
+  c = 1'b1;
+  #10;
+  
+  a = 1'b1;
+  b = 1'b1;
+  c = 1'b1;
+  #10;
+  
+ */    end
      end
   
   $monitor($time, "Input a b c = %b %b %b, Output sum = %b, carry = %b", i_a_tb, i_b_tb, i_c_tb);
