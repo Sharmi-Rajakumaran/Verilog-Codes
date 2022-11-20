@@ -8,4 +8,21 @@ integer i;
 
 // Instantiation of the decoder RTL design
 
-  a_4_decoder DUT();
+  2_4_decoder DUT(.i_I(i_I_tb), .o_Y(o_Y_tb));
+  
+// Stimulus generation during runtime in the initial begin block
+  
+  initial
+    begin
+      for(i = 0; i < 4; i = i+1)
+        begin
+          {i_I_tb} = i;
+          #50;
+        end
+    end
+  
+  initial 
+    $monitor("Input = %d, Output = %d", i_I_tb, o_Y_tb);
+  
+  #200 $finish;
+endmodule
