@@ -1,0 +1,3 @@
+# Makefile
+RTL = ../rtl/*.v
+LIB = coin
